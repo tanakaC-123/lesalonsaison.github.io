@@ -19,6 +19,9 @@ h1 span {
     position: fixed;
     text-align: center;
     margin-bottom: 50px;
+    background-color: #ffffff; /* ヘッダーの背景色 */
+    z-index: 1000; /* ヘッダーが他の要素の上に表示されるようにするためのz-index */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ヘッダーに影を追加 */
 }
 
 .glovalNavi li {
