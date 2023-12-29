@@ -16,6 +16,7 @@ h1 span {
 }
 
 .glovalNavi {
+    position: fixed;
     text-align: center;
     margin-bottom: 50px;
 }
