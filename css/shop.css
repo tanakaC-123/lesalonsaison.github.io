@@ -4,7 +4,6 @@ body {
     padding-top: 70px; /* ヘッダー分の余白を追加 */
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* メニュー欄とコンテンツを縦に並べる */
 }
 
 h1 {
@@ -15,7 +14,7 @@ h1 {
     margin: 0;
     padding: 20px 0;
     background-color: red;
-    width: 100%;
+    width: 25%; /* タイトルの幅を25%に設定 */
     top: 0;
     z-index: 1000;
 }
@@ -26,8 +25,10 @@ h1 span {
 }
 
 .glovalNavi {
-    text-align: center;
-    margin-bottom: 20px;
+    background-color: #333; /* メニュー欄の背景色を設定 */
+    width: 25%; /* メニュー欄の幅を25%に設定 */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .glovalNavi ul {
@@ -35,13 +36,13 @@ h1 span {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: row; /* メニュー項目を横に並べる */
+    flex-direction: column; /* メニュー項目を縦に並べる */
 }
 
 .glovalNavi li {
     display: block;
     font-weight: bold;
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .glovalNavi span {
@@ -49,13 +50,10 @@ h1 span {
     font-weight: normal;
 }
 
-.glovalNavi li:last-child {
-    margin-right: 0;
-}
-
 .mainContent {
-    width: 100%; /* コンテンツの幅を100%に設定 */
+    width: 75%; /* コンテンツの幅を75%に設定 */
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .mainImage {
@@ -84,6 +82,13 @@ h1 span {
 @media only screen and (max-width: 600px) {
     body {
         padding-top: 100px;
+        flex-direction: column; /* スマホの場合は縦に並べる */
+    }
+
+    h1,
+    .glovalNavi,
+    .mainContent {
+        width: 100%; /* スマホの場合は横幅を100%にする */
     }
 
     h1 {
@@ -100,10 +105,13 @@ h1 span {
         margin-bottom: 20px;
     }
 
+    .glovalNavi ul {
+        flex-direction: row; /* スマホの場合は横に並べる */
+    }
+
     .glovalNavi li {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0;
+        margin-right: 10px;
     }
 
     .glovalNavi span {
