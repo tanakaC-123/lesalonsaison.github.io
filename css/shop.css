@@ -1,7 +1,7 @@
 /* 共通のスタイル（PCおよびスマートフォン用） */
 body {
-    margin: 0; /* ページの外側のマージンをゼロに設定 */
-    padding-top: 50px;
+    margin: 0;
+    padding-top: 90px; /* ヘッダーの高さに合わせて調整 */
 }
 
 h1 {
@@ -18,17 +18,20 @@ h1 span {
 
 .glovalNavi {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    margin-bottom: 50px;
-    background-color: #ffffff; /* ヘッダーの背景色 */
-    z-index: 1000; /* ヘッダーが他の要素の上に表示されるようにするためのz-index */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ヘッダーに影を追加 */
+    padding: 20px 0; /* 上下の余白を追加 */
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .glovalNavi li {
     display: inline-block;
     font-weight: bold;
-    margin-right: 40px;
+    margin-right: 20px; /* 余白を調整 */
 }
 
 .glovalNavi span {
@@ -42,7 +45,7 @@ h1 span {
 
 .mainImage {
     width: 100%;
-    margin-bottom: 50px;
+    margin-top: 90px; /* ヘッダーの高さに合わせて調整 */
 }
 
 .mainImage img {
@@ -65,7 +68,7 @@ h1 span {
 /* スマートフォン用のスタイル */
 @media only screen and (max-width: 600px) {
     body {
-        padding-top: 20px;
+        padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
     }
 
     h1 {
@@ -77,7 +80,8 @@ h1 span {
     }
 
     .glovalNavi {
-        margin-bottom: 20px;
+        padding: 10px 0; /* 上下の余白を調整 */
+        margin-bottom: 10px;
     }
 
     .glovalNavi li {
@@ -91,8 +95,7 @@ h1 span {
     }
 
     .mainImage {
-        width: 100%;
-        margin-bottom: 20px;
+        margin-top: 60px; /* ヘッダーの高さに合わせて調整 */
     }
 
     .aboutSection h2 {
