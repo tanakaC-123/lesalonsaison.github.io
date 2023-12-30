@@ -1,7 +1,7 @@
 /* 共通のスタイル */
 body {
     margin: 0;
-    padding-top: 70px; /* ヘッダーの高さよりも大きな値に変更 */
+    padding-top: 70px; /* ヘッダー分の余白を追加 */
     font-family: Arial, sans-serif;
 }
 
@@ -13,6 +13,7 @@ h1 {
     margin: 0;
     padding: 20px 0;
     background-color: #ffffff;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -25,12 +26,12 @@ h1 span {
 
 .glovalNavi {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .glovalNavi.fixed {
     position: fixed;
-    margin-top: 0;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: #ffffff;
@@ -41,7 +42,7 @@ h1 span {
 .glovalNavi li {
     display: inline-block;
     font-weight: bold;
-    margin-right: 35px;
+    margin-right: 40px;
 }
 
 .glovalNavi span {
@@ -55,7 +56,7 @@ h1 span {
 
 .mainImage {
     width: 100%;
-    margin-top: 70px; /* ヘッダーの高さよりも大きな値に変更 */
+    margin-top: 70px; /* ヘッダー分の余白を追加 */
     margin-bottom: 50px;
 }
 
@@ -75,15 +76,17 @@ h1 span {
     font-size: 35px;
     border-bottom: 2px solid #000000;
 }
+
 /* スマートフォン用のスタイル */
 @media only screen and (max-width: 600px) {
     body {
-        padding-top: 100px; /* スマートフォンのヘッダーの高さに合わせて調整 */
+        padding-top: 100px;
     }
 
     h1 {
         font-size: 30px;
         padding: 10px 0;
+        margin-top: 0;
     }
 
     h1 span {
@@ -91,7 +94,7 @@ h1 span {
     }
 
     .glovalNavi {
-        margin-top: 100px; /* スマートフォンのヘッダーの高さに合わせて調整 */
+        margin-top: 100px;
         margin-bottom: 20px;
     }
 
@@ -106,6 +109,7 @@ h1 span {
     }
 
     .mainImage {
+        margin-top: 100px; /* ヘッダー分の余白を追加 */
         margin-bottom: 20px;
     }
 
