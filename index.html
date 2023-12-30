@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>le salon Saison</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="https://tanakaC-123.github.io/css/shop.css">
-    <link rel="stylesheet" href="styles.css"> <!-- 外部CSSファイルのリンク -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Salon</title>
 </head>
 <body>
-    <h1><span>le salon</span> <br> Saison</h1>
-    <ul class="glovalNavi">
-        <li><a href="#home">HOME<br><span>ホーム</span></a></li>
-        <li><a href="#news">NEWS<br><span>お知らせ</span></a></li>
-        <li><a href="#menu">MENU<br><span>メニュー</span></a></li>
-        <li><a href="#catalogue">CATALOGUE<br><span>ヘアカタログ</span></a></li>
-        <li><a href="#access">ACCESS<br><span>アクセス</span></a></li>
-        <li><a href="#reserve">RESERVE<br><span>ご予約</span></a></li>
-    </ul>
+    <h1><span>Your Salon</span></h1>
+
+    <!-- Navigation Menu -->
+    <nav class="glovalNavi">
+        <ul>
+            <li>HOME<br><span>ホーム</span></li>
+            <li>NEWS<br><span>お知らせ</span></li>
+            <li>MENU<br><span>メニュー</span></li>
+            <li>CATALOGUE<br><span>ヘアカタログ</span></li>
+            <li>ACCESS <br><span>アクセス</span></li>
+            <li>RESERVE<br><span>ご予約</span></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
     <div class="mainImage">
-        <img src="https://tanakaC-123.github.io/images/S__9281541.jpg">
+        <img src="https://tanakaC-123.github.io/images/S__9281541.jpg" alt="Salon Image">
     </div>
 
     <div class="aboutSection">
         <h2>商品ラインナップ<br> <span> ABOUT </span> </h2>
         <ul>
-            <li><img src=""></li>
+            <li><img src="" alt=""></li>
             <li><img src="" alt=""></li>
             <li><img src="" alt=""></li>
         </ul>
     </div>
 
-    <h2 id="news">お知らせ　<br> NEWS</h2>
+    <h2>お知らせ　<br> NEWS</h2>
     <table>
         <tr>
             <th></th>
         </tr>
     </table>
     <a href="">Instagram</a>
-    <p>©︎ 2023 Rio Hamaguchi</p>
+    <p>©︎ 2023 Your Salon</p>
 
-    <script>
-        // 固定ヘッダー用のスクリプト
-        window.onscroll = function () {
-            const title = document.querySelector('h1');
-            const header = document.querySelector('.glovalNavi');
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li>HOME<br><span>ホーム</span></li>
+            <li>NEWS<br><span>お知らせ</span></li>
+            <li>MENU<br><span>メニュー</span></li>
+            <li>CATALOGUE<br><span>ヘアカタログ</span></li>
+            <li>ACCESS <br><span>アクセス</span></li>
+            <li>RESERVE<br><span>ご予約</span></li>
+        </ul>
+    </div>
 
-            if (window.pageYOffset > title.offsetHeight) {
-                header.classList.add('fixed');
-            } else {
-                header.classList.remove('fixed');
-            }
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
