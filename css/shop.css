@@ -1,7 +1,7 @@
 /* 共通のスタイル */
 body {
     margin: 0;
-    padding-top: 70px; /* ヘッダー分の余白を追加 */
+    padding-top: 90px; /* ヘッダー分の余白を追加 */
     font-family: Arial, sans-serif;
 }
 
