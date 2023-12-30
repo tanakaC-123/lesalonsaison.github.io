@@ -4,54 +4,55 @@
     <title>le salon Saison</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="discription" content="">
+    <meta name="description" content="">
     <link rel="stylesheet" href="https://tanakaC-123.github.io/css/shop.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 外部CSSファイルのリンク -->
 </head>
 <body>
     <h1><span>le salon</span> <br> Saison</h1>
-    <ul class = "glovalNavi">
-      <li>HOME<br><span>ホーム</span>
-      </li>
-      <li>NEWS<br><span>お知らせ</span></li>
-      <li>MENU<br><span>メニュー</span></li>
-      <li>CATALOGUE<br><span>ヘアカタログ</span> </li>
-      <li>ACCESS <br><span>アクセス</span>
-      </li>
-      <li>RESERVE<br><span>ご予約</span></li>
+    <ul class="glovalNavi">
+        <li><a href="#home">HOME<br><span>ホーム</span></a></li>
+        <li><a href="#news">NEWS<br><span>お知らせ</span></a></li>
+        <li><a href="#menu">MENU<br><span>メニュー</span></a></li>
+        <li><a href="#catalogue">CATALOGUE<br><span>ヘアカタログ</span></a></li>
+        <li><a href="#access">ACCESS<br><span>アクセス</span></a></li>
+        <li><a href="#reserve">RESERVE<br><span>ご予約</span></a></li>
     </ul>
 
-    <div class ="mainImage">
+    <div class="mainImage">
         <img src="https://tanakaC-123.github.io/images/S__9281541.jpg">
     </div>
 
-
-    <div class ="aboutSection">
-     <h2>商品ラインナップ<br> <span> ABOUT </span> </h2>
-     <ul>
-        <li>
-            <img src="">
-        </li>
-        <li>
-            <img src="" alt="">
-        </li>
-        <li>
-            <img src="" alt="">
-        </li>
-     </ul>
+    <div class="aboutSection">
+        <h2>商品ラインナップ<br> <span> ABOUT </span> </h2>
+        <ul>
+            <li><img src=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
     </div>
 
-
-    <h2>お知らせ　<br> NEWS</h2>
+    <h2 id="news">お知らせ　<br> NEWS</h2>
     <table>
         <tr>
-            <th>
-
-            </th>
+            <th></th>
         </tr>
     </table>
     <a href="">Instagram</a>
     <p>©︎ 2023 Rio Hamaguchi</p>
 
+    <script>
+        // 固定ヘッダー用のスクリプト
+        window.onscroll = function () {
+            const title = document.querySelector('h1');
+            const header = document.querySelector('.glovalNavi');
+
+            if (window.pageYOffset > title.offsetHeight) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
+        };
+    </script>
 </body>
 </html>
