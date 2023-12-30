@@ -22,25 +22,15 @@ h1 span {
     font-size: 15px;
     font-weight: normal;
 }
-
 .glovalNavi {
-    text-align: center;
+    text-align: left; /* テキストを左寄せにする */
     margin-bottom: 50px;
 }
 
-.glovalNavi.fixed {
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 .glovalNavi li {
-    display: inline-block;
+    display: block; /* ブロック要素に変更して縦に並べる */
     font-weight: bold;
-    margin-right: 40px;
+    margin-bottom: 10px; /* 各項目の下に余白を追加 */
 }
 
 .glovalNavi span {
@@ -49,8 +39,9 @@ h1 span {
 }
 
 .glovalNavi li:last-child {
-    margin-right: 0;
+    margin-bottom: 0; /* 最後の項目には余白を追加しない */
 }
+
 
 .mainImage {
     width: 100%;
