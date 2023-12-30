@@ -1,7 +1,7 @@
 /* 共通のスタイル */
 body {
     margin: 0;
-    padding-top: 20px; /* ヘッダー分の余白を追加 */
+    padding-top: 70px; /* ヘッダー分の余白を追加 */
     font-family: Arial, sans-serif;
 }
 
@@ -22,15 +22,25 @@ h1 span {
     font-size: 15px;
     font-weight: normal;
 }
+
 .glovalNavi {
-    text-align: left; /* テキストを左寄せにする */
+    text-align: center;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.glovalNavi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .glovalNavi li {
-    display: block; /* ブロック要素に変更して縦に並べる */
+    display: inline-block;
     font-weight: bold;
-    margin-bottom: 10px; /* 各項目の下に余白を追加 */
+    margin-right: 40px;
 }
 
 .glovalNavi span {
@@ -39,31 +49,24 @@ h1 span {
 }
 
 .glovalNavi li:last-child {
-    margin-bottom: 0; /* 最後の項目には余白を追加しない */
+    margin-right: 0;
 }
 
-
-.mainImage {
-    width: 100%;
-    margin-top: 70px; /* ヘッダー分の余白を追加 */
-    margin-bottom: 50px;
+.menu-icon {
+    display: none;
+    cursor: pointer;
 }
 
-.mainImage img {
-    width: 100%;
-    height: auto;
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
 }
 
-.aboutSection h2 {
-    line-height: 1.2;
-    text-align: center;
-    font-size: 11px;
-    margin-bottom: 40px;
-}
-
-.aboutSection h2 span {
-    font-size: 35px;
-    border-bottom: 2px solid #000000;
+.mobile-menu {
+    display: none;
 }
 
 /* スマートフォン用のスタイル */
@@ -87,27 +90,39 @@ h1 span {
         margin-bottom: 20px;
     }
 
-    .glovalNavi li {
+    .glovalNavi ul {
+        display: none;
+    }
+
+    .menu-icon {
         display: block;
-        margin-right: 0;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        background-color: #fff;
+        width: 60%;
+        max-width: 300px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu ul {
+        padding: 20px;
+    }
+
+    .mobile-menu li {
+        display: block;
         margin-bottom: 10px;
     }
 
-    .glovalNavi span {
-        font-size: 8px;
-    }
-
-    .mainImage {
-        margin-top: 100px; /* ヘッダー分の余白を追加 */
-        margin-bottom: 20px;
-    }
-
-    .aboutSection h2 {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .aboutSection h2 span {
-        font-size: 20px;
+    .glovalNavi.fixed {
+        display: none;
     }
 }
