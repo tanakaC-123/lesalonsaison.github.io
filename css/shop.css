@@ -13,7 +13,6 @@ h1 {
     margin: 0;
     padding: 20px 0;
     background-color: #ffffff;
-    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -26,7 +25,7 @@ h1 span {
 
 .glovalNavi {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .glovalNavi.fixed {
