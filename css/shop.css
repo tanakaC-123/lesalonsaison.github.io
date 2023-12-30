@@ -1,7 +1,8 @@
-/* 共通のスタイル（PCおよびスマートフォン用） */
+/* 共通のスタイル */
 body {
     margin: 0;
-    padding-top: 90px; /* ヘッダーの高さ分の余白を確保 */
+    padding-top: 90px;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -9,6 +10,13 @@ h1 {
     font-size: 40px;
     letter-spacing: 1px;
     line-height: 1.2;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 h1 span {
@@ -26,9 +34,9 @@ h1 span {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff; /* ヘッダーの背景色 */
-    z-index: 1000; /* ヘッダーが他の要素の上に表示されるようにするためのz-index */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ヘッダーに影を追加 */
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .glovalNavi li {
@@ -48,6 +56,7 @@ h1 span {
 
 .mainImage {
     width: 100%;
+    margin-top: 90px;
     margin-bottom: 50px;
 }
 
@@ -66,46 +75,4 @@ h1 span {
 .aboutSection h2 span {
     font-size: 35px;
     border-bottom: 2px solid #000000;
-}
-
-/* スマートフォン用のスタイル */
-@media only screen and (max-width: 600px) {
-    body {
-        padding-top: 60px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h1 span {
-        font-size: 12px;
-    }
-
-    .glovalNavi {
-        margin-bottom: 20px;
-    }
-
-    .glovalNavi li {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .glovalNavi span {
-        font-size: 8px;
-    }
-
-    .mainImage {
-        margin-top: 80px; /* タイトルとヘッダーの高さを合わせる */
-    }
-
-    .aboutSection h2 {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .aboutSection h2 span {
-        font-size: 20px;
-    }
 }
